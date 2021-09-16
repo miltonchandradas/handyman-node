@@ -2,10 +2,12 @@ const express = require("express");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
 const colors = require("colors");
+const cors = require("cors");
 const connectDB = require("./config/db");
 
 // Route files
 const projects = require("./routes/projects");
+const subscription = require("./routes/subscription");
 
 // Load environment variables
 dotenv.config({
@@ -20,6 +22,9 @@ const app = express();
 // Body Parser
 app.use(express.json());
 
+// Enable cors
+app.use(cors());
+
 // DEV logging middleware
 if (process.env.NODE_ENV === "development") {
    app.use(morgan("dev"));
@@ -27,8 +32,10 @@ if (process.env.NODE_ENV === "development") {
 
 // Mount routers
 app.use("/api/v1/projects", projects);
+app.use("/api/v1/subscription", subscription);
 
-const PORT = process.env.port || 5000;
+const PORT = process.env.PORT || 8080;
+console.log("PORT: ", PORT);
 
 const server = app.listen(
    PORT,

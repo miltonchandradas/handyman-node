@@ -1,0 +1,8 @@
+---
+applications:
+- name: handyman-node
+  buildpack: nodejs_buildpack
+  memory: 1024m
+  disk_quota: 2048MB
+  instances: 1
+  command: npm run start
