@@ -1,6 +1,6 @@
 ---
 applications:
-- name: handyman-node
+- name: handymannode
   buildpack: nodejs_buildpack
   memory: 1024m
   disk_quota: 2048MB
