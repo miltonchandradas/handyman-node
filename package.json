@@ -1,5 +1,5 @@
 {
-  "name": "handyman-node",
+  "name": "handymannode",
   "version": "1.0.0",
   "description": "Handyman Node REST API",
   "main": "server.js",
