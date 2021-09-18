@@ -7,6 +7,8 @@ const connectDB = require("./config/db");
 
 // Route files
 const projects = require("./routes/projects");
+const posts = require("./routes/posts");
+const users = require("./routes/users");
 const subscription = require("./routes/subscription");
 
 // Load environment variables
@@ -32,6 +34,8 @@ if (process.env.NODE_ENV === "development") {
 
 // Mount routers
 app.use("/api/v1/projects", projects);
+app.use("/api/v1/posts", posts);
+app.use("/api/v1/users", users);
 app.use("/api/v1/subscription", subscription);
 
 const PORT = process.env.PORT || 8080;

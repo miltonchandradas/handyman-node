@@ -1,6 +1,17 @@
 const Subscription = require("../models/Subscription");
 const webpush = require("web-push");
 
+exports.getSubscriptions = async () => {
+   try {
+      const subscriptions = await Subscription.find();
+      console.log("Subscriptions Find(): ", JSON.stringify(subscriptions));
+      return subscriptions;
+   } catch (err) {
+      console.log("Error retrieving subscriptions: ", err);
+      return [];
+   }
+};
+
 exports.createSubscription = async (req, res, next) => {
    // Push notification
    webpush.setVapidDetails(
@@ -17,7 +28,9 @@ exports.createSubscription = async (req, res, next) => {
          success: true,
       });
 
-      const payload = JSON.stringify({ title: "Push test..." });
+      const payload = JSON.stringify({
+         title: "From Backend Server:  Successfully subscribed to Notification Service...",
+      });
       webpush.sendNotification(requestBody, payload);
    } catch (err) {
       res.status(400).json({ success: false });

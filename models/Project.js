@@ -6,6 +6,7 @@ const ProjectSchema = new mongoose.Schema({
       required: [true, "Please provide a title"],
       trim: true,
    },
+   subTitleText: String,
    slug: String,
    description: String,
    projectedStartDate: {
@@ -20,6 +21,7 @@ const ProjectSchema = new mongoose.Schema({
       type: Number,
       default: 100,
    },
+   handyman: String,
    rating: {
       type: Number,
       min: [1, "Rating must be at least 1"],

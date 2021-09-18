@@ -1,3 +1,22 @@
-{
-    "title": "Mounting TV on wall..."
-}
+[{
+    "title": "Mounting TV on wall...",
+    "subTitleText": "Smart TV installation",
+    "description": "Need to install my 75 inch Samsung TV on top of the fireplace.  Power outlet and cabling infrastructure already present.  I need 2 HDMI cables to be installed...",
+    "estimatedCost": 250,
+    "handyman": "Kyle Randolph",
+    "rating": 5
+}, {
+    "title": "Painting bedroom and guest rooms",
+    "subTitleText": "Beautiful homes",
+    "description": "Want to paint my bedroom.  Dimensions are 14 feet by 10 feet.  Also, want to paint couple of guest rooms upstairs.  Dimensions are roughly 10 feet by 9 feet...",
+    "estimatedCost": 650,
+    "handyman": "John Doe",
+    "rating": 4
+}, {
+    "title": "Install ceiling fan",
+    "subTitleText": "Electric and Plumbing Needs",
+    "description": "Would like a quote for installing 4 ceiling fans in our new house",
+    "estimatedCost": 350,
+    "handyman": "Mark Samik",
+    "rating": 5
+}]
