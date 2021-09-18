@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node ./server.js"
   },
+  "engines" : { "node" : ">=0.12" },
   "author": "Milton Chandradas",
   "license": "ISC",
   "dependencies": {
