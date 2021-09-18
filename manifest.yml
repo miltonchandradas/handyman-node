@@ -5,4 +5,4 @@ applications:
   memory: 1024m
   disk_quota: 2048MB
   instances: 1
-  command: node server
+  command: npm run start
