@@ -31,15 +31,14 @@ exports.getProject = async (req, res, next) => {
 };
 
 exports.createProject = async (req, res, next) => {
-
    try {
       const project = await Project.create(req.body);
       res.status(201).json({
          success: true,
          data: project,
       });
-
    } catch (err) {
+      console.log("Error during project creation: ", err);
       res.status(400).json({ success: false });
    }
 };
@@ -76,8 +75,6 @@ exports.deleteProject = async (req, res, next) => {
          success: true,
          data: {},
       });
-
-      
    } catch (err) {
       res.status(400).json({ success: false });
    }
